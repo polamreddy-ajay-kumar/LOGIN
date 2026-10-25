@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100a2b">
+  <meta name="description" content="A4MP RAG Systems — secure sign in and private knowledge workspace.">
+  <title>A4MP RAG Systems | Welcome Back</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="aurora aurora-one"></div><div class="aurora aurora-two"></div>
+  <main class="shell">
+    <header class="brand">
+      <div class="brand-mark">A4MP</div>
+      <div class="brand-copy">
+        <div class="brand-title">A4MP RAG SYSTEMS</div>
+        <div class="brand-subtitle">PRIVATE KNOWLEDGE · FULL-STACK INTELLIGENCE</div>
+      </div>
+    </header>
+
+    <section class="auth-card" aria-labelledby="headline">
+      <div class="eyebrow"><span class="spark"></span> YOUR KNOWLEDGE, CONNECTED</div>
+      <h1 id="headline">Welcome back</h1>
+      <p class="intro" id="intro">Sign in to continue to your private workspace.</p>
+
+      <div class="tabs" role="tablist" aria-label="Account access">
+        <button class="tab active" id="login-tab" role="tab" aria-selected="true" type="button">Sign in</button>
+        <button class="tab" id="register-tab" role="tab" aria-selected="false" type="button">Create account</button>
+      </div>
+
+      <form id="auth-form" novalidate>
+        <div class="field" id="name-field" hidden>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Polamreddy Ajay Kumar" maxlength="80">
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+        </div>
+        <div class="field">
+          <div class="label-row"><label for="password">Password</label><button type="button" class="text-button" id="toggle-password">Show</button></div>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="At least 8 characters" minlength="8" maxlength="128" required>
+        </div>
+        <div class="form-meta" id="form-meta"><span>Protected session</span><span>·</span><span>Private workspace</span></div>
+        <button class="primary-button" id="submit-button" type="submit"><span>Sign in</span><span class="arrow">↗</span></button>
+        <p class="message" id="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="separator"><span></span><small>OR CONTINUE WITH</small><span></span></div>
+      <div class="social-row">
+        <button class="social-button" type="button" data-provider="Google"><span class="google-icon">G</span> Google</button>
+        <button class="social-button" type="button" data-provider="GitHub"><span class="github-icon">⌘</span> GitHub</button>
+      </div>
+      <p class="oauth-note">Social sign-in needs provider credentials and callback setup.</p>
+      <div class="bottom-links"><span>New to A4MP?</span> <button type="button" class="text-button" id="bottom-register">Join now</button><span class="dot">·</span><button type="button" class="text-button" id="forgot-button">Forgot password?</button></div>
+    </section>
+
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="eyebrow"><span class="spark"></span> AUTHENTICATED SESSION</div>
+      <h1 id="dashboard-title">Welcome to A4MP</h1>
+      <p class="intro" id="dashboard-intro">Your workspace is ready.</p>
+      <div class="feature-grid">
+        <article><span>01</span><h3>Private knowledge</h3><p>Organize knowledge for your workspace.</p></article>
+        <article><span>02</span><h3>Project files</h3><p>Keep your project workflow in one place.</p></article>
+        <article><span>03</span><h3>RAG assistant</h3><p>Build on your own documents and data.</p></article>
+      </div>
+      <button class="primary-button" id="logout-button" type="button">Sign out <span class="arrow">↗</span></button>
+    </section>
+    <footer><span class="footer-orb"></span> A4MP RAG SYSTEMS <span class="footer-dot">·</span> BUILT FOR YOUR KNOWLEDGE</footer>
+  </main>
+</body>
+</html>
